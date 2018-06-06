@@ -1,0 +1,15 @@
+current directory: /Users/ushijimayuuta/workspace/Rails/alpha-blog/vender/bundler/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/ushijimayuuta/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180606-76623-l8ls0b.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ushijimayuuta/workspace/Rails/alpha-blog/vender/bundler/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/ushijimayuuta/workspace/Rails/alpha-blog/vender/bundler/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/ushijimayuuta/workspace/Rails/alpha-blog/vender/bundler/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20180606-76623-13q41cv
