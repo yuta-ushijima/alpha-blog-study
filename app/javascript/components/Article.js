@@ -15,15 +15,31 @@ class Article extends React.Component {
           <div className="article-meta-details">
             <small>Created by: {this.props.authoer},
                    &nbsp;
-                   <Timestamp time={this.props.created_at} precision={3} />,
-                   last updated: <Timestamp time={this.props.uodated_at} precision={3} />
+                   <Timestamp time={this.props.created_at} precision={4} />,
+                   last updated: <Timestamp time={this.props.updated_at} precision={4} />
             </small>
           </div>
         </div>
       </React.Fragment>
     );
   }
+  componentDidMount() {
+    /*Articleコンポーネントが読み込まれた直後にsetIntervalが呼び出され、
+    forceUpdateにより、1秒ごとに秒数が非同期でカウントアップされる。 */
+    let self = this;
+    setInterval(() => { self.forceUpdate() }, 1000);
+  }
+  componentWillUnmount() {
+    /*componentDidMountで設定したsetIntervalを解除するために定義。
+      ここでのthisはArticleComponent自身を指す */
+    if (this._timer) {
+      clearInterval(this._timer);
+      this._timer = null;
+    }
+  }
 }
+
+
 
 Article.propTypes = {
   title: PropTypes.string,
