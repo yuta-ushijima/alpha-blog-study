@@ -35,7 +35,7 @@
           <%= f.text_field :color, class: "form-control", placeholder: "カラーコードを入力してください。" %>
         </div>
         <div class="col-sm-6">
-          <%= react_component('Colorpicker', { color: '#fff' } ) %>
+          <%= react_component('Colorpicker', { color: '#fff', selector: 'user_color' } ) %> <!-- user_colorはidを指している。colorはlabelで指定しているcolorを参照-->
         </div>
       </div>
       
